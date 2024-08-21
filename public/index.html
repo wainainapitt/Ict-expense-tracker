@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ICT Expense Tracker</h1>
+        <form id="expenseForm" action="/add-expense" method="POST">
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="Laptops">Laptops</option>
+                    <option value="Peripherals">Peripherals</option>
+                    <option value="Service Maintenance">Service Maintenance</option>
+                    <option value="Network Gadgets">Network Gadgets</option>
+                    <option value="Printers">Printers</option>
+                    <option value="Cameras">Cameras</option>
+                    <option value="Laptop Replacements">Laptop Replacements</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="description">Item/Service Description:</label>
+                <input type="text" id="description" name="description" required>
+            </div>
+            <div class="form-group">
+                <label for="vendor">Vendor:</label>
+                <input type="text" id="vendor" name="vendor" required>
+            </div>
+            <div class="form-group">
+                <label for="cost">Cost:</label>
+                <input type="number" id="cost" name="cost" required>
+            </div>
+            <div class="form-group">
+                <label for="invoiceNumber">Invoice Number:</label>
+                <input type="text" id="invoiceNumber" name="invoiceNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="prNumber">PR Number:</label>
+                <input type="text" id="prNumber" name="prNumber">
+            </div>
+            <input type="submit" value="Add Expense">
+            <div id="successMessage" style="color: #28a745; margin-top: 10px; display: none;">
+                Expense successfully added!
+            </div>
+        </form>
+        <button id="downloadCsv">Download CSV</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
