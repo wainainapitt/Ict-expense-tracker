@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Optional: Add functionality to download the expenses as a CSV file
     document.getElementById('downloadCsv').addEventListener('click', function () {
-        fetch('/download-expenses')
+        fetch('http://localhost:3000/download-expenses')
         .then(response => response.blob())
         .then(blob => {
             const url = window.URL.createObjectURL(blob);
